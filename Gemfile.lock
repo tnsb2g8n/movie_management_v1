@@ -9,6 +9,15 @@ GIT
       activesupport (>= 3.0)
       request_store (~> 1.0)
 
+GIT
+  remote: https://github.com/rails/activemodel-serializers-xml.git
+  revision: 356edf4dfc38fb1fbfee90c87856e4fe5b73c5e1
+  specs:
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -264,6 +273,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel-serializers-xml!
   bcrypt (~> 3.1.7)
   better_errors (~> 2.1.1)
   binding_of_caller (~> 0.7.2)
