@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class DeviseCreateUsers < ActiveRecord::Migration[5.1]
+class DeviseCreateServiceManagers < ActiveRecord::Migration[5.1]
   def change
-    create_table :users, comment: '一般ユーザ' do |t|
+    create_table :service_managers, comment: 'サービス運営者' do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -33,7 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       t.string :name
-      t.string :line_id
+      t.string :role_code
 
       t.references :service, foreign_key: true
 
@@ -41,10 +41,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.timestamps null: false
     end
 
-    add_index :users, :email,                unique: true
-    add_index :users, :line_id,              unique: true
-    add_index :users, :reset_password_token, unique: true
-    # add_index :users, :confirmation_token,   unique: true
-    # add_index :users, :unlock_token,         unique: true
+    add_index :service_managers, :email,                unique: true
+    add_index :service_managers, :reset_password_token, unique: true
+    # add_index :service_managers, :confirmation_token,   unique: true
+    # add_index :service_managers, :unlock_token,         unique: true
   end
 end

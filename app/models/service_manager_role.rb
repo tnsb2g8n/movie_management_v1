@@ -1,0 +1,2 @@
+class ServiceManagerRole < ApplicationRecord
+end
