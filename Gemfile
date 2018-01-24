@@ -64,6 +64,10 @@ gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 gem 'omniauth-facebook', '~> 4.0.0'
 
+# デザイン
+gem 'bower-rails', '~> 0.11.0'
+gem 'font-awesome-rails', '~> 4.7.0'
+
 # 論理削除
 gem "paranoia", "~> 2.2"
 
